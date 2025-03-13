@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Définit l'encodage des caractères utilisés dans la page (UTF-8) -->
+        <meta charset="UTF-8">
+    
+        <!-- Assure que la page est rendue correctement dans Internet Explorer en utilisant le moteur de rendu le plus récent -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+        <!-- Définit les paramètres de la vue pour les appareils mobiles, permettant un affichage responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Lien vers la feuille de style externe Font Awesome pour utiliser des icônes -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- Lien vers Google Fonts pour utiliser la police Poppins -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <!-- Lien vers ta propre feuille de style CSS pour la mise en page et le design -->
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- Titre de la page qui apparaît dans l'onglet du navigateur -->
+        <title>Portfolio</title>
+    </head>
+    
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo" >
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <nav class="navigation">
+            <a href="#main2">À propos</a>
+            <a href="#main3">Formation</a>
+            <a href="#main4">Logiciels</a>
+            <a href="#main5">Design</a>
+            <a href="">Centres d'intérêt</a>
+        </nav>
+    </header>
+
+    <section id="main1" class="main">
+        
+        <img src="images/photo.png" alt="photo" class="photo">
+        <div class="organiserbtn">
+                <a href="https://drive.google.com/file/d/1nHEbhDr1O3uVGXol2JH-PyKgeU9HJgj7/view?usp=drive_link" class="btncv" target="_blank" onclick="return promptPassword()">Curriculum Vitae</a>
+                <a href="https://drive.google.com/file/d/1uK-Jbyi_2ZWQnhiRtb3UdNvY7u3b3x2Y/view?usp=drive_link" class="btncv" target="_blank" onclick="return promptPassword()">Portfolio PDF</a>
+        </div>
+            
+            <script>
+                function promptPassword() {
+                    var password = prompt("Veuillez entrer le mot de passe pour accéder au fichier:");
+                    if (password === "Azul") {
+                        return true;
+                    } else {
+                        alert("Mot de passe incorrect.");
+                        return false;
+                    }
+                }
+            </script>
+        
+    </section>
+    
+    <section id="main2" class="main">
+        <img src="images/photo2.png" alt="photo2" class="photo2">
+
+        <p class="paragraphe1">Je suis un étudiant passionné par les domaines créatifs et analytiques. 
+            Actuellement en études de mathématiques, je m'intéresse profondément à l'anthropologie, 
+            au design graphique, à l'art, à l'architecture, ainsi qu'à la photographie, aux voyages et au sport.
+             J'aime également développer en informatique et laisser libre cours à ma créativité.</p>
+
+    </section>
+    <section id="main3" class="main">
+       
+        <div class="images-formation">
+            <div class="card">
+                <img src="images/nfs.png" alt="Formation">
+                <p>Je suis à la recherche d'une alternance pour ma troisième année de Bachelor en tant que chargé de projet 
+                    numérique à l'école Need for School de Rouen.
+                </p>
+            </div>
+            <div class="card">
+                <img src="images/rouen.png" alt="Formation">
+                <div class="card" id="card-content">
+                    <p>Actuellement en 3ème année de licence de mathématiques à l'université de Rouen.</p>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var cardContent = document.getElementById('card-content');
+                        cardContent.style.filter = 'blur(5px)';
+
+                        cardContent.addEventListener('click', function() {
+                            var password = prompt("Veuillez entrer le mot de passe pour voir le contenu:");
+                            if (password === "Azul") {
+                                cardContent.style.filter = 'none';
+                            } else {
+                                alert("Mot de passe incorrect.");
+                            }
+                        });
+                    });
+                </script>
+            </div>
+
+            <div class="card">
+                <img src="images/lh.png" alt="Formation">
+                <div class="card" id="card-content2">
+                    <p>J'ai effectué une première année de licence en mathématiques et informatique à l'Université du Havre,
+                         puis une deuxième année dans le même domaine.
+                    </p>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var cardContent = document.getElementById('card-content2');
+                        cardContent.style.filter = 'blur(5px)';
+
+                        cardContent.addEventListener('click', function() {
+                            var password = prompt("Veuillez entrer le mot de passe pour voir le contenu:");
+                            if (password === "Azul") {
+                                cardContent.style.filter = 'none';
+                            } else {
+                                alert("Mot de passe incorrect.");
+                            }
+                        });
+                    });
+                </script>
+               
+            </div>
+
+            <div class="card">
+                <img src="images/esi.png" alt="Formation">
+                <p>Après mon bac S, j'ai suivi un cycle préparatoire en informatique à l'Ecole Nationale Supérieure d'Informatique
+                     de Sidi Bel Abbès en Algérie.
+                
+                </p>
+            </div>
+            <div class="card">
+                <img src="images/bac.png" alt="Formation">
+                <p>Baccalauréat scientifique obtenu en 2019 avec mention très bien.
+                </p>
+            </div>
+            
+            
+            
+        
+        </div>
+    
+    </section>
+
+    
+    <section id="main4" class="main">
+        
+        <div class="images-logiciels">
+            <h2>Logiciels</h2>
+            <div class="images-logiciels-wrapper">
+                <!-- Première série d'images -->
+                <img src="images/logiciels/1.png" alt="Logiciel 1">
+                <img src="images/logiciels/2.png" alt="Logiciel 2">
+                <img src="images/logiciels/3.png" alt="Logiciel 3">
+                <img src="images/logiciels/4.png" alt="Logiciel 4">
+                <img src="images/logiciels/5.png" alt="Logiciel 5">
+                <img src="images/logiciels/6.png" alt="Logiciel 6">
+                <img src="images/logiciels/7.png" alt="Logiciel 7">
+                <img src="images/logiciels/8.png" alt="Logiciel 8">
+                <img src="images/logiciels/9.png" alt="Logiciel 9">
+                <img src="images/logiciels/10.png" alt="Logiciel 10">
+                <img src="images/logiciels/11.png" alt="Logiciel 11">
+                <img src="images/logiciels/12.png" alt="Logiciel 12">
+                <img src="images/logiciels/13.png" alt="Logiciel 13">
+                <img src="images/logiciels/14.png" alt="Logiciel 14">
+                <img src="images/logiciels/15.png" alt="Logiciel 15">
+                <img src="images/logiciels/16.png" alt="Logiciel 16">
+                <img src="images/logiciels/17.png" alt="Logiciel 17">
+                <img src="images/logiciels/18.png" alt="Logiciel 18">
+                <img src="images/logiciels/19.png" alt="Logiciel 19">
+                <img src="images/logiciels/20.png" alt="Logiciel 20">
+                
+                <!-- Duplication des images pour un défilement fluide -->
+                <img src="images/logiciels/1.png" alt="Logiciel 1">
+                <img src="images/logiciels/2.png" alt="Logiciel 2">
+                <img src="images/logiciels/3.png" alt="Logiciel 3">
+                <img src="images/logiciels/4.png" alt="Logiciel 4">
+                <img src="images/logiciels/5.png" alt="Logiciel 5">
+                <img src="images/logiciels/6.png" alt="Logiciel 6">
+                <img src="images/logiciels/7.png" alt="Logiciel 7">
+                <img src="images/logiciels/8.png" alt="Logiciel 8">
+                <img src="images/logiciels/9.png" alt="Logiciel 9">
+                <img src="images/logiciels/10.png" alt="Logiciel 10">
+                <img src="images/logiciels/11.png" alt="Logiciel 11">
+                <img src="images/logiciels/12.png" alt="Logiciel 12">
+                <img src="images/logiciels/13.png" alt="Logiciel 13">
+                <img src="images/logiciels/14.png" alt="Logiciel 14">
+                <img src="images/logiciels/15.png" alt="Logiciel 15">
+                <img src="images/logiciels/16.png" alt="Logiciel 16">
+                <img src="images/logiciels/17.png" alt="Logiciel 17">
+                <img src="images/logiciels/18.png" alt="Logiciel 18">
+                <img src="images/logiciels/19.png" alt="Logiciel 19">
+                <img src="images/logiciels/20.png" alt="Logiciel 20">
+            </div>
+        </div>
+        
+    </section>
+    <section id="main5" class="main">
+        <h2>Design et photographie</h2>
+        <div class="organiserbtn2">
+                <a href="https://drive.google.com/file/d/1YrAmckqhcp_Y97vjAz7ZRYLMaRHNPRIZ/view?usp=drive_link" class="btn2" target="_blank" onclick="return promptPassword()"> Livre Photo Séville</a>
+                <a href="https://drive.google.com/file/d/1QZ3cAwyujJKvV9BpkVge5hEjtjAoBqJJ/view?usp=drive_link" class="btn2" target="_blank" onclick="return promptPassword()">Livre Photo Milan</a>
+                <a href="https://drive.google.com/file/d/1GkNXa5T2-1onGxYRb4Y4Q5NMzkepivQb/view?usp=drive_link" class="btn2" target="_blank" onclick="return promptPassword()">Livre Photo Paris</a>
+                <a href="https://drive.google.com/file/d/1uuQv-w_owx4AQYGO2Yey6gBmQXHGeD1N/view?usp=drive_link" class="btn2" target="_blank" onclick="return promptPassword()">Livre Photo Minorque</a>
+                <a href="https://drive.google.com/file/d/10fDo_Jm98PWR0NELdcYIxDsp4dnwrW8K/view?usp=drive_link" class="btn2" target="_blank" onclick="return promptPassword()">Livre Photo Louvre</a>
+                <a href="" class="btn2" target="_blank" onclick="return promptPassword()">Photos</a>
+                <a href="" class="btn2" target="_blank" onclick="return promptPassword()">Dessins</a>
+                <a href="https://fr.pinterest.com/agrakal/photos/" class="btn2" target="_blank" >Mon Pinterest</a>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/silas-chekroun-aa9bb1332/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/silas-ckrn" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://fr.pinterest.com/agrakal/photos/" target="_blank">
+                <i class="fab fa-pinterest"></i>
+            </a>
+            <a href="https://dribbble.com/silasckrn" target="_blank">
+                <i class="fab fa-dribbble"></i>
+            </a>
+            <a href="https://www.behance.net/silaschekroun" target="_blank">
+                <i class="fab fa-behance"></i>
+            </a>
+        </div>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:silaschekroun.pro@gmail.com">silaschekroun.pro@gmail.com</a></p>
+        </div>
+       
+    <p>© 2025 Silas Chekroun | Tous droits réservés</p>
+    </footer>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navigation = document.querySelector(".navigation");
+
+        menuToggle.addEventListener("click", function() {
+            navigation.classList.toggle("active");
+        });
+    });
+</script>
+
+</html>
