@@ -402,7 +402,7 @@ justify-content: center;
 
     .photo {
         width: 200%; /* Définit la largeur de l'image à 80% */
-        height: 100%; /* Définit la hauteur de l'image à 100% */
+        height: 200%; /* Définit la hauteur de l'image à 100% */
         
         position: static; /* Positionne l'élément de manière statique */
         transform: none; /* Supprime toute transformation appliquée */
